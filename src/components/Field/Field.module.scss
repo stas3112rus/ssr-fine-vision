@@ -1,0 +1,27 @@
+.Field{
+    max-width: 1000px;
+    min-height: 400px;
+    margin:  0 auto;
+    background-color: #FFFFCC;
+
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: 200px 200px 200px;
+
+    &-changeTheme{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+
+        button{
+            width: 200px;
+            height: 60px;
+            background-color: chartreuse;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+}
