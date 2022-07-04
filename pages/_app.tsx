@@ -8,7 +8,7 @@ import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 
 import { Context } from '../src/ThemeContext';
-import { themesKinds } from "../src/types/types";
+import { themeNames } from "../src/types/types";
 
 import Layout from '../src/components/Layouts/Layouts';
 
@@ -24,7 +24,7 @@ export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   // храним название темы
-  const [context, setContext] = useState<themesKinds >("lightTheme");
+  const [context, setContext] = useState<themeNames >("lightTheme");
   
   return (
     <Context.Provider value={{theme: context, set: setContext}}>

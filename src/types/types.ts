@@ -1,4 +1,4 @@
-type themeNames = "lightTheme" | "darkTheme";
+export type themeNames = "lightTheme" | "darkTheme";
 
 export interface themeContext{
     theme: themeNames,
