@@ -9,17 +9,11 @@ import Link from '../src/Link';
 import Head from 'next/head'
 import { Context } from '../src/ThemeContext';
 
-interface IData { 
-  data: {
-    title: string
-  }  
-}
-
+import {IData, themeContext } from "../src/types/types";
 
 const About: NextPage<IData>  = (data) => {
   
-  const [context] = useContext(Context);
-
+  const context = useContext<themeContext | null>(Context); 
 
   return (
     <div>
@@ -40,8 +34,8 @@ const About: NextPage<IData>  = (data) => {
         >
 
         <h1>About страница </h1>
-        <h2>Текущая тема {context}</h2>
-        <h2>title fetch {data.data.title}</h2>
+        <h2>Текущая тема: {context ? context.theme : null}</h2>
+        <h2>Получено асинхронно: {data.data.title}</h2>
 
           <Typography variant="h4" component="h1" gutterBottom>
             MUI v5 + Next.js with TypeScript example
@@ -61,7 +55,7 @@ export default About;
 
 
 export async function getServerSideProps() {
-  const data = await (await fetch('https://jsonplaceholder.typicode.com/todos/12'))?.json()
+  const data: IData = await (await fetch('https://jsonplaceholder.typicode.com/todos/12'))?.json()
 
   return {
     props: {

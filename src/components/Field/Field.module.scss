@@ -1,8 +1,7 @@
 .Field{
     max-width: 1000px;
     min-height: 400px;
-    margin:  0 auto;
-    background-color: #FFFFCC;
+    margin:  0 auto;   
 
     display: grid;
     grid-template-columns: repeat(5, 200px);

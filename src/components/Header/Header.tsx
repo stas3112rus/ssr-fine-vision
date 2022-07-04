@@ -3,20 +3,19 @@ import { useState } from 'react';
 
 import { Context } from "../../ThemeContext";
 import Button from '@mui/material/Button';
-import styles from './header.module.scss'
-
-
-
+import styles from './header.module.scss';
+import {themeContext} from "../../types/types";
 
 
 const Header: React.FC = () => {
    
-
-    const [context, setContext] = useContext(Context);  
+    const context = useContext<themeContext | null>(Context);  
 
     const changeTheme = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{
         e.preventDefault();     
-        setContext(context == "lightTheme" ? "darkTheme" : "lightTheme");             
+        if (context){
+            context.set(context.theme === "lightTheme" ? "darkTheme" : "lightTheme");
+        }             
     }
 
 

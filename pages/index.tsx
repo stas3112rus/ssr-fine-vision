@@ -7,12 +7,8 @@ import Box from '@mui/material/Box';
 import Link from '../src/Link';
 import Head from 'next/head'
 import Field from "../src/components/Field/Field";
+import {IData} from "../src/types/types";
 
-interface IData { 
-    data: {
-      title: string
-    }  
-}
 
 
 const Home: NextPage<IData> = (data) => {
@@ -36,7 +32,7 @@ const Home: NextPage<IData> = (data) => {
         >
 
           <h1>Главная страница </h1>
-          <h2>title fetch {data.data.title}</h2>
+          <h2>Получено асинхронно: {data.data.title}</h2>
           
           <Link href="/about" color="secondary">
             Go to the about page
@@ -55,7 +51,7 @@ export default Home;
 
 
 export async function getServerSideProps() {
-  const data = await (await fetch('https://jsonplaceholder.typicode.com/todos/1'))?.json()
+  const data: IData = await (await fetch('https://jsonplaceholder.typicode.com/todos/1'))?.json()
 
   return {
     props: {

@@ -1,5 +1,6 @@
 import React from "react";
 
-type themesKinds = "lightTheme" | "darkTheme";
+import { themeContext } from "./types/types"
 
-export const Context = React.createContext<themesKinds>("lightTheme");
+
+export const Context = React.createContext<themeContext | null>(null);

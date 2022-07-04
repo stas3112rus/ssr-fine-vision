@@ -8,6 +8,8 @@ import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 
 import { Context } from '../src/ThemeContext';
+import { themesKinds } from "../src/types/types";
+
 import Layout from '../src/components/Layouts/Layouts';
 
 
@@ -18,15 +20,14 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
 
-type themesKinds = "lightTheme" | "darkTheme";
-
-
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+  // храним название темы
   const [context, setContext] = useState<themesKinds >("lightTheme");
   
   return (
-    <Context.Provider value={[context, setContext]}>
+    <Context.Provider value={{theme: context, set: setContext}}>
       <CacheProvider value={emotionCache}>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
