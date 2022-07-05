@@ -14,7 +14,7 @@ const Item = ({name, color, currentTheme}: IItem) =>{
 
     return (
         <div className={styles.Item}>
-             <CustomItem>{name}</CustomItem>
+             <CustomItem className={styles.ItemBtn}>{name}</CustomItem>            
         </div>       
     )
 }

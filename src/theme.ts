@@ -1,9 +1,10 @@
 import { createTheme } from '@mui/material/styles';
 import { orange, green, blue, pink, yellow, red, brown } from '@mui/material/colors';
-
+import { purple } from '@mui/material/colors';
 
 
 declare module '@mui/material/styles' {
+
 
   type ThemeType = {
     backColor: string,
@@ -35,19 +36,33 @@ declare module '@mui/material/styles' {
     temporary?: string 
   }
 
+
+
   interface Theme {
     lightTheme: ThemeType,
     darkTheme: ThemeType
   }
 
   // allow configuration using `createTheme`
-  interface ThemeOptions {
+  interface ThemeOptions {    
     lightTheme?: ThemeOptionsType,
     darkTheme?: ThemeOptionsType
   }  
 }
 
 const theme = createTheme({
+
+    palette: {
+      primary: {
+        // Purple and green play nicely together.
+        main: purple[500],
+      },
+      secondary: {
+        // This is green.A700 as hex.
+        main: '#11cb5f',
+      },
+    },
+
     lightTheme: {
       backColor: "#FFFFCC",
       fontColor: "black",
@@ -78,4 +93,5 @@ const theme = createTheme({
     }
   });
 
-export default theme;
+
+export {theme};

@@ -6,6 +6,7 @@ import { Context } from '../../ThemeContext';
 import Item from "../Item/Item";
 
 import { themeContext } from '../../types/types';
+import { Button } from '@mui/material';
 
 
 const Field = () => {    
@@ -31,6 +32,7 @@ const Field = () => {
                     <Item name="lovely" currentTheme={context ? context.theme : null} color="lovely"/>
                     <Item name="grossy" currentTheme={context ? context.theme : null} color="grossy"/>
                     <Item name="temporary" currentTheme={context ? context.theme : null} color="temporary"/>
+                    <Button variant="contained" >Дефолтная кнопка с измененным цветом</Button>
                 </CustomField>
             </div> 
     )   
