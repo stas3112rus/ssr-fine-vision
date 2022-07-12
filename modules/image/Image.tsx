@@ -1,4 +1,3 @@
-import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 import React, { useContext } from "react";
 import { Context } from "../../src/ThemeContext";
 import { fineVisionShowImage, IImage } from "../../src/types/types"

@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { fineVisionMode } from "../../types/types";
 import { setCookie } from 'cookies-next';
 
-const HeaderFineMode: React.FC = () => {
+const HeaderBlackWhiteMode: React.FC = () => {
     
     const context = useContext(Context); 
 
@@ -35,4 +35,4 @@ const HeaderFineMode: React.FC = () => {
     )
 }
 
-export default HeaderFineMode;
+export default HeaderBlackWhiteMode;

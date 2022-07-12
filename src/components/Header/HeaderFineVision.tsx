@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button';
 import HeaderBtnsSizes from "./HeaderBtnsSizes";
-import HeaderFineMode from "./HeaderFineMode";
+import HeaderBlackWhiteMode from "./HeaderBlackWhiteMode";
 import HeaderBtnShowImg from "./HeaderBtnShowImg";
 import HeaderFineVisionBtn from "./HeaderFineVisionBtn";
 
@@ -16,7 +16,7 @@ const HeaderFineVision: React.FC<IHeader> = (props)  => {
         <div className={"header__fineVision"}>
             
             <HeaderBtnsSizes />
-            <HeaderFineMode />
+            <HeaderBlackWhiteMode />
             <HeaderBtnShowImg />
                             
             <div>
