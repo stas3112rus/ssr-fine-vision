@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -9,14 +9,14 @@ import Link from '../src/Link';
 import Head from 'next/head'
 import { Context } from '../src/ThemeContext';
 
-import {IData, themeContext } from "../src/types/types";
+import {IData, IContext } from "../src/types/types";
 
 const About: NextPage<IData>  = (data) => {
   
-  const context = useContext<themeContext | null>(Context); 
+  const context = useContext<IContext | null>(Context); 
 
   return (
-    <div>
+    <div className="aboutPage">
       <Head>
         <title>Страница о компании</title>
         <meta name="description" content="Описание компании" />
@@ -34,7 +34,7 @@ const About: NextPage<IData>  = (data) => {
         >
 
         <h1>About страница </h1>
-        <h2>Текущая тема: {context ? context.theme : null}</h2>
+        <h2>Текущая тема: {context ? context.themeMain.name : null}</h2>
         <h2>Получено асинхронно: {data.data.title}</h2>
 
           <Typography variant="h4" component="h1" gutterBottom>

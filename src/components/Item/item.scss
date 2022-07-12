@@ -1,0 +1,54 @@
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &__Btn{
+        width: 90px;
+        height: 50px;
+    }
+
+    &_main{
+        background-color: rgb(32, 10, 231);
+        color: #fff;
+    }
+
+    &_primary{
+        background-color: pink;
+        color: #fff;
+
+    }
+    &_secondary{
+        background-color: yellow;
+        color: #fff;
+    }
+    &_error{
+        background-color: red;
+        color: #fff;
+    }
+    &_danger{
+        background-color: orange;
+        color: #fff;
+    }
+    &_dark{
+        background-color: rgb(92, 88, 88);
+        color: #fff;
+    }
+    &_light{
+        background-color: rgb(240, 225, 142);
+        color: #fff;
+    }
+    &_lovely{
+        background-color: green;
+        color: #fff;
+    }
+    &_grossy{
+        background-color: darkred;
+        color: #fff;
+    }
+    &_temporary{
+        background-color: darkmagenta;
+        color: #fff;
+    }
+}

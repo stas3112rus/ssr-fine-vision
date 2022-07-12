@@ -1,6 +1,7 @@
 import React from "react";
 
-import { themeContext } from "./types/types"
+import { IContext} from "./types/types"
 
 
-export const Context = React.createContext<themeContext | null>(null);
+export const Context = React.createContext<IContext | null>(null);
+

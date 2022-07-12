@@ -1,0 +1,23 @@
+.fineVision{
+    .link{
+        &__main-page{
+            color: black;
+            text-decoration-color: black;
+        }
+    }
+
+    .aboutPage{
+        a{
+            background-color: black;
+            color: white;
+        }
+    }
+
+    &.fineVision__150{
+        font-size: 150%;
+    }
+
+    &.fineVision__200{
+        font-size: 200%;
+    }
+}

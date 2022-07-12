@@ -1,32 +1,36 @@
 import React, { useContext } from "react";
-import { useState } from 'react';
-
 import { Context } from "../../ThemeContext";
-import Button from '@mui/material/Button';
-import styles from './header.module.scss';
-import {themeContext} from "../../types/types";
+import { Container } from "@mui/system";
+import HeaderStandard from "./HeaderStandard";
+import HeaderFineVision from "./HeaderFineVision";
+import { setCookie } from 'cookies-next';
+
 
 
 const Header: React.FC = () => {
    
-    const context = useContext<themeContext | null>(Context);  
-
-    const changeTheme = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>{
-        e.preventDefault();     
+    const context = useContext(Context);
+    
+    function changeTheme (e: React.MouseEvent<HTMLButtonElement, MouseEvent>){
+        e.preventDefault(); 
+            
         if (context){
-            context.set(context.theme === "lightTheme" ? "darkTheme" : "lightTheme");
-        }             
+            const currentTheme = context.themeMain.name === "standard" ? "fineVision" : "standard";
+            context.themeMain.set(currentTheme);
+            setCookie('theme', currentTheme, {maxAge: 365 * 24 * 60 * 60, path: './'});          
+        } 
     }
 
 
     return (
-        <div className={styles.header}>
-             <Button 
-                variant="contained"
-                onClick={(e)=>changeTheme(e)}
-            >
-                Сменить тему
-            </Button>
+        <div className={"header"}>
+            <Container sx={{minHeight: "inherit"}}>
+                {
+                    context?.themeMain.name === "fineVision" ? 
+                        <HeaderFineVision changeTheme={changeTheme}/> : 
+                        <HeaderStandard changeTheme={changeTheme}/>
+                }
+            </Container>
         </div>
     )
 

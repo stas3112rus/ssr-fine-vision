@@ -1,0 +1,16 @@
+.fineVision{
+    &.fineVision__dark{
+         
+        &.fineVision__dont-show{
+            .modules-image{            
+                &_text-block{
+                    display: inline-block;
+                    border: 2px solid #fff;
+                    color: #fff;
+                    padding: 5px;
+                    width: inherit;
+                }
+            }
+        }
+    }    
+}

@@ -1,0 +1,22 @@
+.header{
+    width: 100%;
+    min-height: 120px;
+    background-color: bisque;
+
+    &__standard{
+        min-height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: bisque;
+    }
+
+    &__showImage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

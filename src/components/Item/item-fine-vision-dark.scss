@@ -1,0 +1,19 @@
+.fineVision{
+    &.fineVision__dark{
+        .item{        
+            &_main,    
+            &_primary,
+            &_secondary,
+            &_error,
+            &_danger,
+            &_dark,
+            &_light,
+            &_lovely,
+            &_grossy,
+            &_temporary{
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }    
+}

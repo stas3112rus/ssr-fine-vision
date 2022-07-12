@@ -1,5 +1,3 @@
-import Button from '@mui/material/Button';
-import styles from './footer.module.scss'
 import ProTip from "../ProTip/ProTip";
 import Copyright from '../Copyright/Copyright';
 
@@ -11,7 +9,7 @@ const Footer: React.FC = () => {
 
 
     return (
-        <div className={styles.footer}>
+        <div className={"footer "}>
             <ProTip/>
             <Copyright/>
         </div>

@@ -1,0 +1,24 @@
+.fineVision{
+    .header{        
+        background-color: grey;
+
+        &__fineVision{
+            min-height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: grey;
+
+
+
+            button{
+                background-color: black;
+            }
+        }
+
+        &__blockBtn{
+            display: flex;
+            gap: 10px;
+        }
+    }
+}

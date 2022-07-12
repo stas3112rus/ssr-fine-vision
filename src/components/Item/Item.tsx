@@ -1,20 +1,15 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import styles from './Item.module.scss';
 import Button from '@mui/material/Button';
 import { IItem } from '../../types/types';
 
-const Item = ({name, color, currentTheme}: IItem) =>{
+const Item = ({name, classModify}: IItem) =>{
     
-    const CustomItem = styled(Button)(({ theme }) => ({        
-        background: currentTheme ?  theme[currentTheme][color] : "#fff",
-        color: currentTheme ?   theme[currentTheme].fontColor : "#000",
-        
-      }));
+
 
     return (
-        <div className={styles.Item}>
-             <CustomItem className={styles.ItemBtn}>{name}</CustomItem>            
+        <div className={"item"}>
+            <Button className={`item__Btn item_${classModify}`}>
+                {name}
+            </Button>
         </div>       
     )
 }

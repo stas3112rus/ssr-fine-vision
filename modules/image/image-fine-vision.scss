@@ -1,0 +1,27 @@
+.fineVision{
+    &.fineVision__white-black{
+        .modules-image{
+
+            &_white-black{
+                filter: grayscale(100%); 
+            } 
+
+        }
+    }
+    
+    &.fineVision__dont-show{
+        .modules-image{
+            &_dont-show{
+                display: none;
+            }
+
+            &_text-block{
+                display: inline-block;
+                border: 2px solid black;
+                color: black;
+                padding: 5px;
+                width: inherit;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "../src/components/Field/field.scss";
+@import "../src/components/Field/field-fine-vision.scss";
+@import "../src/components/Field/field-fine-vision-dark.scss";
+@import "../src/components/Item/item.scss";
+@import "../src/components/Item/item-fine-vision.scss";
+@import "../src//components/Item/item-fine-vision-dark.scss";
+@import "../src/components/Header/header.scss";
+@import "../src/components/Header/header-fine-vision.scss";
+@import "../src/components/Footer/footer.scss";
+@import "../src/components/Footer/footer-fine-vision.scss";
+@import "../src/components/ProTip/proTip-fine-vision.scss";
+@import "../modules/image/image-fine-vision.scss";
+@import "../modules/image/image-fine-vision-dark.scss";
+
+//Подключать в конце
+@import "./fineFision.scss";
+@import "./fineFision-dark.scss";

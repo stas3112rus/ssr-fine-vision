@@ -39,16 +39,32 @@ declare module '@mui/material/styles' {
 
 
   interface Theme {
-    lightTheme: ThemeType,
-    darkTheme: ThemeType
+    standard: ThemeType,
+    fineVision: ThemeType
+  }
+
+  interface Palette {
+    neutral: Palette['primary'];
+  }
+  interface PaletteOptions {
+    neutral: PaletteOptions['primary'];
   }
 
   // allow configuration using `createTheme`
   interface ThemeOptions {    
-    lightTheme?: ThemeOptionsType,
-    darkTheme?: ThemeOptionsType
+    standard?: ThemeOptionsType,
+    fineVision?: ThemeOptionsType
   }  
 }
+
+// Update the Button's color prop options
+declare module '@mui/material/Button' {
+  interface ButtonPropsColorOverrides {
+    neutral: true,
+  }
+}
+
+
 
 const theme = createTheme({
 
@@ -61,9 +77,14 @@ const theme = createTheme({
         // This is green.A700 as hex.
         main: '#11cb5f',
       },
+
+      neutral: {
+        main: '#64748B',
+        contrastText: '#fff',
+      },
     },
 
-    lightTheme: {
+    standard: {
       backColor: "#FFFFCC",
       fontColor: "black",
       main: blue[100], 
@@ -77,7 +98,7 @@ const theme = createTheme({
       grossy:  red[100],
       temporary: pink[100] 
     },
-    darkTheme: {
+    fineVision: {
       backColor: "#330033",
       fontColor: "white",
       main: blue[900], 
